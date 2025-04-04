@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>متجر هيرو</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>متجر هيرو - Hero Store</header>
+
+  <nav>
+    <input type="text" id="searchInput" placeholder="ابحث عن منتج..." oninput="searchProducts()">
+    <button onclick="filterProducts('all')">الكل</button>
+    <button onclick="filterProducts('photo')">هودي</button>
+    <button onclick="filterProducts('rham_photo')">بناطيل</button>
+    <button onclick="filterProducts('zgay_photo')">تيشيرتات</button>
+    <button onclick="filterProducts('kalb_photo')">جواكت</button>
+  </nav>
+
+  <div class="grid" id="productsGrid"></div>
+
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <img id="popupImg" src="" alt="">
+      <h2 id="popupTitle"></h2>
+      <p id="popupDesc"></p>
+      <p>السعر: <span id="popupPrice"></span> جنيه</p>
+      <input type="number" id="quantity" placeholder="الكمية" min="1" value="1" oninput="updateTotal()">
+      <p>الإجمالي: <span id="totalPrice">0</span> جنيه</p>
+      <a id="whatsappLink" href="#" target="_blank">طلب عبر واتساب</a>
+      <a id="telegramLink" href="#" target="_blank">طلب عبر تليجرام</a>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
