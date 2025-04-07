@@ -8,7 +8,7 @@ const db = firebase.database();
 const categories = {
   "photo": "dolab",
   "rham_photo": "rham",
-  "zgay_photo": "zgag",
+  "zgag_photo": "zgag",
   "kalb_photo": "kalb"
 };
 
